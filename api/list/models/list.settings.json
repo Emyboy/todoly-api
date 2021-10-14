@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lists",
+  "info": {
+    "name": "list",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 140
+    },
+    "color": {
+      "type": "string"
+    },
+    "todos": {
+      "via": "list",
+      "collection": "todo"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "todos",
+  "info": {
+    "name": "todo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "todo": {
+      "type": "string",
+      "maxLength": 90,
+      "minLength": 1,
+      "required": true
+    },
+    "is_completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "list": {
+      "model": "list",
+      "via": "todos"
+    }
+  }
+}
